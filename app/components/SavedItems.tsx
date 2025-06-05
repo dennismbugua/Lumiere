@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { useCart } from "../context/CartContext";
 import { CartItem } from "../types";
@@ -43,7 +42,7 @@ export default function SavedItems({ onClose }: SavedItemsProps) {
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-4 top-4 text-gray-400 hover:text-gray-500"
+              className="cursor-pointer absolute right-4 top-4 text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Close</span>
               <svg
@@ -112,7 +111,7 @@ function SavedItemCard({
         <p className="mt-1 text-lg font-medium text-gray-900">${item.price}</p>
         <button
           onClick={onAddToCart}
-          className="mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors"
+          className="cursor-pointer mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors"
         >
           Add to Cart
         </button>

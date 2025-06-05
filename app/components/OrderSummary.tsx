@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useCart } from "../context/CartContext";
-import { Product, CartItem } from "../types";
+import { CartItem } from "../types";
 import toast from "react-hot-toast";
 
 interface OrderSummaryProps {
@@ -79,7 +79,7 @@ export default function OrderSummary({ onClose }: OrderSummaryProps) {
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-4 top-4 text-gray-400 hover:text-gray-500"
+              className="cursor-pointer absolute right-4 top-4 text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">Close</span>
               <svg
@@ -156,7 +156,7 @@ export default function OrderSummary({ onClose }: OrderSummaryProps) {
                         </p>
                       </div>
                     </div>
-                    <button className="mt-6 w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700">
+                    <button className="cursor-pointer mt-6 w-full bg-indigo-600 text-white py-3 px-4 rounded-md hover:bg-indigo-700">
                       Proceed to Checkout
                     </button>
                   </div>
@@ -212,7 +212,7 @@ function CartItemCard({
         </div>
         <button
           onClick={onRemove}
-          className="mt-4 text-sm text-red-600 hover:text-red-800 flex items-center"
+          className="cursor-pointer mt-4 text-sm text-red-600 hover:text-red-800 flex items-center"
         >
           <svg
             className="w-4 h-4 mr-1"
@@ -249,11 +249,10 @@ function RemoveModal({
       <div className="flex min-h-full items-end justify-center p-4 sm:items-center">
         <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
         <div className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-          <div className="absolute right-0 top-0 pr-4 pt-4">
+          {/* <div className="absolute right-0 top-0 pr-4 pt-4">
             <button
               type="button"
-              className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              //   onClick={() => setShowRemoveModal(false)}
+              className="cursor-pointer rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               <span className="sr-only">Close</span>
               <svg
@@ -270,7 +269,7 @@ function RemoveModal({
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
 
           <div className="sm:flex sm:items-start">
             <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
@@ -305,21 +304,21 @@ function RemoveModal({
             <button
               type="button"
               onClick={onConfirm}
-              className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:w-auto"
+              className="cursor-pointer inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:w-auto"
             >
               Remove
             </button>
             <button
               type="button"
               onClick={onSaveForLater}
-              className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+              className="cursor-pointer mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
             >
               Save for Later
             </button>
             <button
               type="button"
               onClick={onCancel}
-              className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
+              className="cursor-pointer mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
             >
               Cancel
             </button>
