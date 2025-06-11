@@ -21,7 +21,7 @@ export default function OrderSummary({ onClose }: OrderSummaryProps) {
       removeFromCart(selectedItem.id);
       setShowRemoveModal(false);
       toast.success("Item saved for later!", {
-        duration: 2000,
+        duration: 1000,
         position: "top-right",
         style: {
           background: "#10B981",
@@ -249,28 +249,6 @@ function RemoveModal({
       <div className="flex min-h-full items-end justify-center p-4 sm:items-center">
         <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" />
         <div className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
-          {/* <div className="absolute right-0 top-0 pr-4 pt-4">
-            <button
-              type="button"
-              className="cursor-pointer rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
-              <span className="sr-only">Close</span>
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div> */}
-
           <div className="sm:flex sm:items-start">
             <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
               <svg
